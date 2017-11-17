@@ -38,13 +38,13 @@ public class onclick : MonoBehaviour {
         button.colors = colorVar;
         if (licznik <= 2)
         {
-            Text textscript = GameObject.Find("T" + licznik).GetComponentInChildren<Text>(); // This will get the script responsable for editing text
+            InputField textscript = GameObject.Find("F" + licznik).GetComponentInChildren<InputField>(); // This will get the script responsable for editing text
 
 
             textscript.text = button.name;
             textscript.enabled = false;
             textscript.enabled = true;
-            textscript.color = Color.black;
+           
 
            
         }
