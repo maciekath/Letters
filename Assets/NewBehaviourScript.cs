@@ -15,7 +15,7 @@ public class NewBehaviourScript : MonoBehaviour {
         wyraz.dodajdolisty();
 
         Text textscript = GameObject.Find("Title").GetComponentInChildren<Text>(); // This will get the script responsable for editing text
-        textscript.text = "Podaj pierwszą litere wyrazu "+w;
+        textscript.text = "Podaj pierwszą litere wyrazu ";
         InputField input = GameObject.Find("F1").GetComponentInChildren<InputField>();
         List<InputField> litery = new List<InputField>();
         int przesuniecie = 30;

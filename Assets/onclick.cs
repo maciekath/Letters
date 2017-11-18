@@ -15,6 +15,10 @@ public class onclick : MonoBehaviour {
             SceneManager.LoadScene("Scena");
             licznik = 0;
         }
+        if (button.name=="Exit")
+        {
+            SceneManager.LoadScene("Start");
+        }
 
         licznik++;
     
