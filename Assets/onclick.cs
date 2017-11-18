@@ -13,6 +13,7 @@ public class onclick : MonoBehaviour {
         if (button.name=="Restart")
         {
             SceneManager.LoadScene("Scena");
+            licznik = 0;
         }
 
         licznik++;
@@ -50,14 +51,17 @@ public class onclick : MonoBehaviour {
 
            
         }
+        Debug.Log(licznik+":"+ Wyraz.litery.Count);
         if (licznik == Wyraz.litery.Count)
         {
             for (int i = 1; i <= Wyraz.litery.Count; i++)
             {
                 InputField input = GameObject.Find("F"+i).GetComponentInChildren<InputField>();
-               
+
+                Debug.Log(input.text + ":" + Wyraz.litery[i - 1].ToString());
                 if (input.text == Wyraz.litery[i-1].ToString())
                 {
+                    Debug.Log(input.text + ":" + Wyraz.litery[i - 1].ToString());
                     ColorBlock color = input.colors;
                     color.highlightedColor = Color.green;
                     color.normalColor = Color.green;

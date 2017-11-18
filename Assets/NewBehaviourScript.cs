@@ -11,6 +11,7 @@ public class NewBehaviourScript : MonoBehaviour {
 	void Start () {
         string w = "JABLKO";
         Wyraz wyraz = new Wyraz(w);
+        if (Wyraz.litery.Count==0)
         wyraz.dodajdolisty();
 
         Text textscript = GameObject.Find("Title").GetComponentInChildren<Text>(); // This will get the script responsable for editing text
