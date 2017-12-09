@@ -6,9 +6,19 @@ using UnityEngine.UI;
 
 public class NewBehaviourScript : MonoBehaviour {
 
+    public ttt[] obiekty = new ttt[10];
 
+    public void PokazMenu()
+    {
+
+    }
 
 	void Start () {
+
+        var obrazek = GameObject.Find("jabłko");
+        var word = obrazek.GetComponent<ttt>().word;
+        Debug.Log(word);
+
         string w = "JABLKO";
         Wyraz wyraz = new Wyraz(w);
         if (Wyraz.litery.Count==0)
